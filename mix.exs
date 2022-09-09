@@ -39,13 +39,11 @@ defmodule OpentelemetryCommanded.MixProject do
 
   defp deps do
     [
-      {:commanded,
-        github: "commanded/commanded",
-        ref: "75b19cb3a994aa36984b63bd9b5bffab4d6f8310"},
-#      {:commanded, "~> 1.3.1"},
+      {:commanded, "~> 1.4"},
       {:opentelemetry_telemetry, "~> 1.0.0-beta.7"},
       {:telemetry, "~> 1.0"},
-      {:opentelemetry, "~> 1.0"},
+      {:opentelemetry_api, "~> 1.0"},
+      {:opentelemetry, "~> 1.0", only: [:dev, :test]},
       {:jason, "~> 1.2", only: :test},
       {:ecto, "~> 3.7.1", only: :test},
       {:ex_doc, "~> 0.23.0", only: [:dev], runtime: false}
